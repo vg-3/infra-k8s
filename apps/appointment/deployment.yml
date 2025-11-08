@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: appointment-deployment
+  namespace: apps
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: appointment
+  template:
+    metadata:
+      labels:
+        app: appointment
+    spec:
+      containers:
+        - name: appointment
+          image: your-dockerhub-username/ms1:latest
+          ports:
+            - containerPort: 8080
+# TODO
+# add docker image
