@@ -6,11 +6,11 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: "https://github.com/yourusername/your-repo.git"
+    repoURL: https://github.com/vg-3/infra-k8s.git
     targetRevision: HEAD
     path: apps/appointment
   destination:
-    server: "https://kubernetes.default.svc"
+    server: https://kubernetes.default.svc
     namespace: apps
   syncPolicy:
     syncOptions:
