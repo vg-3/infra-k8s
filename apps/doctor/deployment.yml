@@ -17,6 +17,6 @@ spec:
         - name: doctor-service
           image: your-dockerhub-username/ms1:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 8082
 # TODO
 # add docker image

@@ -17,4 +17,4 @@ spec:
         - name: ui
           image: your-dockerhub-username/ui:latest
           ports:
-            - containerPort: 3000
+            - containerPort: 80
