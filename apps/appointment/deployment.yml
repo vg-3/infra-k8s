@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: appointment
-          image: your-dockerhub-username/ms1:latest
+          image: varshithgowdav/appointment:latest
           ports:
             - containerPort: 8081
 # TODO

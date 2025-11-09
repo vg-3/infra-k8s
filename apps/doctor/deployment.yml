@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: doctor-service
-          image: your-dockerhub-username/ms1:latest
+          image: varshithgowdav/doctor:latest
           ports:
             - containerPort: 8082
 # TODO
