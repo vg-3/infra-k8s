@@ -3,19 +3,16 @@ kind: Ingress
 metadata:
   name: app-ingress
   namespace: apps
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: false
 spec:
   ingressClassName: nginx
   rules:
-    - host: your-domain-here.com # If you have NO domain, remove host: line
-      http:
+    - http:
         paths:
           - path: /api/v1/appointment
             pathType: Prefix
             backend:
               service:
-                name: appointment
+                name: appointment-service
                 port:
                   number: 8081
 
@@ -23,7 +20,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: doctor
+                name: doctor-service
                 port:
                   number: 8082
 
@@ -31,6 +28,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: ui
+                name: ui-service
                 port:
                   number: 80
